@@ -255,7 +255,7 @@ footer p {
     flex-shrink: 0; /* Impede que a área da imagem encolha */
 }
 
-/* Ajuste dos paddings e margins para dispositivos móveis */
+/* Ajustes adicionais para telas pequenas */
 @media (max-width: 600px) {
     .header-container {
         flex-direction: column; /* Alinha itens verticalmente */
@@ -265,23 +265,35 @@ footer p {
     .section-container {
         padding: 1rem; /* Mantém padding consistente */
         margin: 0.5rem auto; /* Ajusta margem para centralizar e evitar espaçamentos excessivos */
+        max-width: 100%; /* Garante que o contêiner não exceda a largura da tela */
     }
 
     .painel {
         max-width: 100%; /* Ajusta largura máxima */
         margin: 1rem auto; /* Garante centralização e espaçamento */
+        padding: 1rem; /* Ajusta o padding */
+    }
+
+    .image-area {
+        margin-top: 1rem; /* Ajusta a margem superior da área da imagem */
+        text-align: center; /* Centraliza a imagem dentro da área */
     }
 
     .image-area img {
-        width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+        width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura do contêiner */
         height: auto; /* Mantém a proporção da imagem */
-        margin-top: 1rem; /* Ajusta a margem superior da imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
     }
 
     .botoes {
         flex-direction: column; /* Empilha os botões verticalmente */
         align-items: center; /* Centraliza os botões */
         margin: 1rem 0; /* Adiciona margem vertical */
+    }
+
+    .botoes button {
+        width: 100%; /* Ajusta a largura dos botões para preencher o contêiner */
+        margin: 0.5rem 0; /* Ajusta a margem dos botões */
     }
 
     textarea, input[type="text"], input[type="email"] {
