@@ -255,28 +255,37 @@ footer p {
     flex-shrink: 0; /* Impede que a área da imagem encolha */
 }
 
-/* Para telas pequenas (smartphones) */
+/* Ajuste dos paddings e margins para dispositivos móveis */
 @media (max-width: 600px) {
     .header-container {
-        flex-direction: column; /* Ajuste a direção do flexbox para coluna em dispositivos móveis */
+        flex-direction: column; /* Alinha itens verticalmente */
+        padding: 0 1rem; /* Reduz o padding para se ajustar melhor em telas pequenas */
     }
 
     .section-container {
-        padding: 1rem; /* Ajuste o padding para maior compatibilidade em dispositivos móveis */
-        margin: 0.5rem auto; /* Ajuste a margem para evitar que o conteúdo fique muito próximo das bordas */
+        padding: 1rem; /* Mantém padding consistente */
+        margin: 0.5rem auto; /* Ajusta margem para centralizar e evitar espaçamentos excessivos */
     }
 
     .painel {
-        max-width: 100%; /* Ajuste a largura máxima para 100% em dispositivos móveis */
-        margin: 0 auto; /* Ajuste a margem para centralizar o painel */
+        max-width: 100%; /* Ajusta largura máxima */
+        margin: 1rem auto; /* Garante centralização e espaçamento */
     }
 
     .image-area img {
-        width: 100%; /* Ajuste a largura da imagem para 100% do contêiner */
-        height: auto; /* Mantenha a proporção da imagem */
+        width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-top: 1rem; /* Ajusta a margem superior da imagem */
     }
 
     .botoes {
-        flex-direction: column; /* Altere a direção dos botões para coluna */
+        flex-direction: column; /* Empilha os botões verticalmente */
+        align-items: center; /* Centraliza os botões */
+        margin: 1rem 0; /* Adiciona margem vertical */
+    }
+
+    textarea, input[type="text"], input[type="email"] {
+        width: 100%; /* Ajusta a largura dos campos de entrada */
+        margin-bottom: 1rem; /* Adiciona margem inferior */
     }
 }
