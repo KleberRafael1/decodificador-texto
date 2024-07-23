@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Decodificador de Texto</h1>            
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section-container">
+            <div class="text-content">
+                <p>Ferramenta para criptografar e descriptografar utilizando a cifra de César.</p>
+                <div class="painel">
+                    <label for="inputText">Texto de Entrada:</label>
+                    <textarea id="inputText" placeholder="Digite seu texto..."></textarea>
+                    
+                    <label id="outputTextLabel" for="outputText">Texto de Saída:</label>
+                    <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
+                    <div class="botoes">
+                        <button onclick="criptografar()">Criptografar</button>
+                        <button onclick="descriptografar()">Descriptografar</button>
+                        <button onclick="limpar()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="image-area">
+                <img src="/assets/Imagem.png" alt="Menino olhando um diamante com uma lupa">
+            </div>
+        </section>
+        
+        <section class="info">
+            <p>Escolha a quantidade de deslocamento para a cifra de César:</p>
+            <div class="range-container">
+                <input type="range" id="deslocamento" min="1" max="25" value="3" oninput="atualizarDeslocamento()">
+                <span id="valorDeslocamento">3</span>
+            </div>
+        </section>
+       
+        
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Kleber Rafael &copy; - 2024</p>
+    </footer>
+
+    <script src="script.js"></script>    
+</body>
+</html>

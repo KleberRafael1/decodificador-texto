@@ -1,0 +1,256 @@
+/* Definição das variáveis de cores */
+:root {
+    --background-color: white;
+    --button-color: #2e2c2a;
+    --button-hover-color: #393f7e;
+    --button-shadow-color: #272522;
+    --panel-background: white;
+    --panel-border: #1522ac;
+    --panel-box-shadow: 0 0 0.25rem var(--button-shadow-color);
+}
+
+/* Estilos gerais do documento */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--panel-background);
+    padding: 1rem 0;
+    box-shadow: var(--panel-box-shadow);
+    text-align: center; /* Centraliza o texto */
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    border: 2px solid #1522ac;
+    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    /*color: var(--button-color); */
+    color: #1522ac;
+    text-shadow: 0 0 0.3125rem var(--button-color), 0 0 0.625rem var(--button-color), 0 0 1.25rem var(--button-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Estilos das seções */
+.section-container {
+    display: flex; /* Utiliza flexbox para organizar os itens lado a lado */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    padding: 0.1rem 2rem;
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: left;
+    background-color: var(--panel-background);
+    box-shadow: var(--panel-box-shadow);
+    border-radius: 0.625rem;
+    margin-top: 2rem;
+    border: 2px solid #1522ac;
+}
+
+/* Estilos do conteúdo de texto e painel */
+.text-content {
+    flex: 1; /* Permite que o conteúdo de texto ocupe o espaço restante */
+    margin-right: 1rem; /* Espaçamento entre o texto e a imagem */
+    
+
+}
+
+
+.section-container h2 {
+    color: var(--button-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-container p {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+/* Adicionando margem menor para o parágrafo com maior especificidade */
+#home p {
+    flex: 1; /* Faz com que o parágrafo ocupe o espaço restante */
+    margin-bottom: 0.5rem; /* Ajuste conforme necessário */
+    margin-top: 1rem; /* Adiciona uma margem superior */
+    padding-left: 20rem; /* Ajusta o recuo à esquerda */
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+
+
+.section-container ul {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+/* Estilos do painel de criptografia */
+.painel {
+    background-color: var(--panel-background);
+    padding: 1rem 2rem; /* Ajuste do padding para reduzir o espaço */
+    border-radius: 1rem;
+    box-shadow: var(--panel-box-shadow);
+    max-width: 40rem;
+    width: 100%;
+    margin: 1rem auto;
+    border: 2px solid #1522ac;
+    margin-left: 15rem; /* Adicione uma margem à esquerda para afastar da imagem */
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+    color: var(--button-color);
+}
+
+textarea, input[type="text"], input[type="email"] {
+    width: 96%;
+    height: 8rem;
+    margin: 0.1rem 0;
+    padding: 0.75rem;
+    border: 0.125rem solid var(--panel-border);
+    border-radius: 0.3125rem;
+    background-color: var(--background-color);
+    color: var(--button-color);
+    font-size: 1rem;
+    box-shadow: 0 0 0.3125rem var(--panel-border);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow: auto; /* Adicione esta linha para permitir a barra de rolagem */
+    resize: none; /* Adicione esta linha para impedir a redimensionamento */
+    
+}
+
+/* Ajustes para o "Texto de Saída" e sua caixa de texto */
+#outputTextLabel {
+    margin-top: 2rem !important;
+}
+
+#outputText {
+    margin-top: 0.1rem !important;
+}
+
+
+textarea {
+    height: 8rem;
+}
+
+input[type="text"], input[type="email"] {
+    height: 3rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.3125rem var(--button-shadow-color), 0 0 0.625rem var(--button-shadow-color);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 0.625rem var(--button-shadow-color), 0 0 1rem var(--button-shadow-color);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.info {
+    margin-top: 2rem;
+    color: var(--button-color);
+    margin-bottom: 0.5rem;
+    
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 1rem 0;
+}
+
+/* Estilos do rodapé */
+footer {
+    /*background-color: var(--panel-background); */
+    background-color: grey;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: var(--panel-box-shadow);
+    margin-top: 2rem;    
+    border: 2px solid #1522ac; /* Cor da borda superior do rodapé */
+    
+}
+
+footer p {
+    margin: 0;
+    color: var(--button-color);
+    font-size: 0.875rem;
+    color: white;
+    font-weight: bold;
+    
+}
+
+/* Centralizando a barra de deslocamento */
+.range-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Certifique-se de que o contêiner ocupe a largura total */
+    margin-top: 0; /* Adicionando uma margem superior para espaçamento */
+    padding-top: 0; /* Ajusta o padding superior para o espaçamento desejado */
+    
+}
+
+.range-container input[type="range"] {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin-right: 1rem; /* Espaço entre a barra de deslocamento e o valor */
+}
+
+.range-container span {
+    font-size: 1rem;
+    color: var(--button-color);
+}
+
+/* Estilos da imagem */
+.image-area img {
+    max-width: 100%; /* Ajusta a largura máxima da imagem para não ultrapassar o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 240px; /* Ajuste a largura conforme necessário */    
+    margin-top: 30px; /* Ajuste a distância acima da imagem conforme necessário */
+}
+
+/* Estilos da área da imagem */
+.image-area {
+    flex-shrink: 0; /* Impede que a área da imagem encolha */
+}
