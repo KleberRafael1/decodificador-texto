@@ -254,3 +254,29 @@ footer p {
 .image-area {
     flex-shrink: 0; /* Impede que a área da imagem encolha */
 }
+
+/* Para telas pequenas (smartphones) */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column; /* Ajuste a direção do flexbox para coluna em dispositivos móveis */
+    }
+
+    .section-container {
+        padding: 1rem; /* Ajuste o padding para maior compatibilidade em dispositivos móveis */
+        margin: 0.5rem auto; /* Ajuste a margem para evitar que o conteúdo fique muito próximo das bordas */
+    }
+
+    .painel {
+        max-width: 100%; /* Ajuste a largura máxima para 100% em dispositivos móveis */
+        margin: 0 auto; /* Ajuste a margem para centralizar o painel */
+    }
+
+    .image-area img {
+        width: 100%; /* Ajuste a largura da imagem para 100% do contêiner */
+        height: auto; /* Mantenha a proporção da imagem */
+    }
+
+    .botoes {
+        flex-direction: column; /* Altere a direção dos botões para coluna */
+    }
+}
